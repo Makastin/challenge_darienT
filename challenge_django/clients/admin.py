@@ -1,6 +1,11 @@
+ ## Django packages ##
+
 from django.contrib import admin
 from clients.models import Client, ClientType
 
+
+
+ ## ADMIN VIEW OF MODEL CLIENT ##
 @admin.register(Client)
 class ClientAdmin(admin.ModelAdmin):
     
@@ -16,6 +21,8 @@ class ClientAdmin(admin.ModelAdmin):
         'email'
     )
     
+    
+ ## ADMIN VIEW OF MODEL CLIENT TYPE ##
 @admin.register(ClientType)
 class ClientTypeAdmin(admin.ModelAdmin):
 
