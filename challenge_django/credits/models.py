@@ -1,7 +1,12 @@
+ ## Django packages ##
+
 from django.db import models
 from clients.models import Client
 from banks.models import Bank
 
+
+
+ ## MODEL OF CREDIT TYPES ##
 class CreditType(models.Model):
     credit_type = models.CharField(
         verbose_name = 'Credit Type',
@@ -17,6 +22,7 @@ class CreditType(models.Model):
         return self.credit_type
 
 
+ ## MODEL OF CREDITS ##
 class Credits(models.Model):
     client = models.ForeignKey(
         Client, 
@@ -27,11 +33,15 @@ class Credits(models.Model):
         verbose_name = 'Credit Description',
         max_length = 150
     )
-    min_payment = models.FloatField(
+    min_payment = models.DecimalField(
         verbose_name = 'Minimum Payment',
+        max_digits=10,
+        decimal_places=2
     )
-    max_payment = models.FloatField(
-        verbose_name = 'Maximun Payment'
+    max_payment = models.DecimalField(
+        verbose_name = 'Maximun Payment',
+        max_digits=10,
+        decimal_places=2
     )
     credit_term = models.PositiveIntegerField(
         verbose_name = 'Credit Term',
