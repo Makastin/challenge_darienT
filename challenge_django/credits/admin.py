@@ -1,6 +1,11 @@
+ ## Django packages ##
+
 from django.contrib import admin
 from credits.models import Credits, CreditType
 
+
+
+ ## ADMIN VIEW OF CREDITS MODEL ##
 @admin.register(Credits)
 class CreditsAdmin(admin.ModelAdmin):
 
@@ -19,7 +24,10 @@ class CreditsAdmin(admin.ModelAdmin):
         'client__last_name',
         'bank_of_credit__name'
     )
-    
+
+
+
+ ## ADMIN VIEW OF CREDIT TYPES ##    
 @admin.register(CreditType)
 class CreditTypeAdmin(admin.ModelAdmin):
     search_fields = ['credit_type']
