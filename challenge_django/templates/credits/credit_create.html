@@ -1,0 +1,58 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block page_title %}
+Credits Create
+{% endblock page_title %} 
+
+{% block page_content %}
+
+<div class="col-xl-12 col-sm-12 mb-xl-0">
+    <div class="card mt-6">
+        <div class="card-body p-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-sm mb-0 text-uppercase font-weight-bold">Crear Credito</h4>
+                    <hr>
+                    <form method="post"> {% csrf_token %}
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-control-label">Cliente del Credito</label> {{form.client}}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-control-label">Descripcion del Credito</label> {{form.credit_description}}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-control-label">Pago Minimo</label> {{form.min_payment}}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-control-label">Pago Maximo</label> {{form.max_payment}}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-control-label">Tiempo del Credito (Meses)</label> {{form.credit_term}}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-control-label">Banco Emisor del Credito</label> {{form.bank_of_credit}}
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn bg-gradient-primary ">Crear Credito</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock page_content %}

@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block page_title %}
+Bank Detail
+{% endblock page_title %} 
+
+{% block page_content %}
+
+<div class="col-xl-12 col-sm-12 mb-xl-0">
+    <div class="card mt-6">
+        <div class="card-body p-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-sm mb-0 text-uppercase font-weight-bold">Detalles del Banco</h4>
+                    <hr>
+                    <form method="post"> {% csrf_token %}
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-control-label">Nombre del Banco</label> {{bank.name}}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-control-label">Tipo de Banco</label> {{bank.bank_type}}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-control-label">Direccion</label> {{bank.address}}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-control-label">Permite Creditos</label> {{bank.allowed_credit}}
+                            </div>
+                          </div>
+                        <div class="text-center">
+                            <a  href="{% url 'banks:bank-list' %}" class='btn-primary btn btn-sm pull-right' data-toggle="tooltip" data-original-title="Edit user">
+                                Regresar a Lista de Bancos
+                                </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock page_content %}
