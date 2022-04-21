@@ -1,6 +1,9 @@
+ ## Django packages ##
+
 from django.db import models
 
 
+ ## Model BankType ##
 class BankType(models.Model):
     bank_type = models.CharField(
         verbose_name = 'Bank Type',
@@ -14,7 +17,7 @@ class BankType(models.Model):
     def __str__(self):
         return self.bank_type
 
-
+ ## Model Bank ##
 class Bank(models.Model):
     name = models.CharField(
         verbose_name = 'Bank Name',

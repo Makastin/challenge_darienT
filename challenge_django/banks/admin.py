@@ -1,7 +1,8 @@
-from atexit import register
 from django.contrib import admin
 from banks.models import Bank, BankType
 
+
+## Admin View of Model Bank ##
 @admin.register(Bank)
 class BankAdmin(admin.ModelAdmin):
 
@@ -14,7 +15,8 @@ class BankAdmin(admin.ModelAdmin):
     list_filter = ['allowed_credit']
     search_fields = ['name']
     
-    
+
+## Admin View of Bank Type ##    
 @admin.register(BankType)
 class BankTypeAdmin(admin.ModelAdmin):
 
