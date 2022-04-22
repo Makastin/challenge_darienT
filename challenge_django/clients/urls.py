@@ -5,14 +5,14 @@ from clients.views import ClientCreate, ClientDetail, ClientUpdate, ClientList, 
 
 urlpatterns = [
     re_path('create-client/$',
-            login_required(ClientCreate.as_view()), name="client-create"),
+            login_required(ClientCreate.as_view()), name="client-create"),      ## URL CLIENT CREATE
     path('detail-client/<int:pk>/',
-            login_required(ClientDetail.as_view()), name="client-detail"),
+            login_required(ClientDetail.as_view()), name="client-detail"),      ## URL CLIENT DETAIL
     path('update-client/<int:pk>/',
-            login_required(ClientUpdate.as_view()), name="client-update"),
+            login_required(ClientUpdate.as_view()), name="client-update"),      ## URL CLIENT UPDATE
     re_path('list-client/$',
-            login_required(ClientList.as_view()), name="client-list"),
+            login_required(ClientList.as_view()), name="client-list"),          ## URL CLIENT LIST
     path('delet-client/<int:pk>/',
-            login_required(ClientDelet.as_view()), name="client-delet"),
+            login_required(ClientDelet.as_view()), name="client-delet"),        ## URL CLIENT DELETE
     
 ]
