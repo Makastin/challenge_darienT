@@ -3,13 +3,9 @@
 from credits.models import Credits, CreditType
 from django.forms import ModelForm
 from django.forms.widgets import (
-    CheckboxInput, 
-    DateInput, 
     NumberInput,
     Select,
-    Textarea,
     TextInput,
-    EmailInput,
 )
 
  ## CreationsForm of Model Credit ##
