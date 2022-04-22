@@ -1,4 +1,9 @@
+
+## Django Packages ##
 from django.contrib import admin
+
+
+## MODEL BANK APP ##
 from banks.models import Bank, BankType
 
 

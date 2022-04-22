@@ -1,9 +1,12 @@
  ## Django packages ##
 
 from django.contrib import admin
-from django.urls import path, re_path
 from django.contrib.auth.decorators import login_required
-from banks.views import BankCreate, BankTypeCreate, BankDetail, BankList
+from django.urls import path, re_path
+
+
+## MODEL BANK APP ##
+from banks.views import BankCreate, BankDetail, BankList, BankTypeCreate
 
  ## URLS BANK APP ##
 

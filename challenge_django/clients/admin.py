@@ -1,8 +1,8 @@
  ## Django packages ##
 
 from django.contrib import admin
-from clients.models import Client, ClientType
 
+from clients.models import Client, ClientType
 
 
  ## ADMIN VIEW OF MODEL CLIENT ##
