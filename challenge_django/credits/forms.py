@@ -19,6 +19,7 @@ class CreditsForm(ModelForm):
             'max_payment',
             'credit_term',
             'bank_of_credit',
+            'credit_type'
         ]
         widgets = {
             'min_payment': NumberInput(attrs={'class': 'form-control', 'required': 'True'}),
@@ -27,4 +28,16 @@ class CreditsForm(ModelForm):
             'bank_of_credit': Select(attrs={'class': 'form-control', 'required': 'True'}),
             'credit_description': TextInput(attrs={'class': 'form-control', 'required': 'True'}),
             'client': Select(attrs={'class': 'form-control', 'required': 'True'}),
+            'credit_type': Select(attrs={'class': 'form-control', 'required': 'True'}),
+        }
+        
+
+class CreditTypeForm(ModelForm):
+    class Meta:
+        model = CreditType
+        fields =[
+            'credit_type',
+        ]
+        widgets = {
+            'credit_type': TextInput(attrs={'class': 'form-control', 'required': 'True'}),
         }
