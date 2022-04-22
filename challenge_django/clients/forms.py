@@ -1,15 +1,21 @@
-from clients.models import Client, ClientType
+## Django Package ##
+
 from django.forms import ModelForm
 from django.forms.widgets import (
     CheckboxInput, 
     DateInput, 
-    NumberInput,
-    Select,
-    Textarea,
-    TextInput,
-    EmailInput
+    EmailInput,
+    NumberInput, 
+    Select, 
+    Textarea, 
+    TextInput
 )
 
+## MODELS CLIENT APP ##
+from clients.models import Client, ClientType
+
+
+## CLIENT CREATEFORM ##
 class ClientFormCreate(ModelForm):
     class Meta:
         model = Client
@@ -40,6 +46,7 @@ class ClientFormCreate(ModelForm):
         }
 
 
+## CLIENT UPDATEFORM ##
 class ClientFormUpdate(ModelForm):
     class Meta:
         model = Client

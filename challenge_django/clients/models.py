@@ -1,7 +1,13 @@
+
+## Djanfgo Packages ##
 from django.db import models
+
+
+## MODEL BANK APP ##
 from banks.models import Bank
 
 
+## MODEL CLIENT TYPE ##
 class ClientType(models.Model):
     client_type = models.CharField(
         verbose_name = 'Client Type',
@@ -16,6 +22,7 @@ class ClientType(models.Model):
         return self.client_type
 
 
+## MODEL CLIENT ##
 class Client(models.Model):
     first_name = models.CharField(
         verbose_name = 'First Name',
