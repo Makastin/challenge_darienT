@@ -1,18 +1,9 @@
 ## Django Package ##
 
-from django.forms import ModelForm
-from django.forms.widgets import (
-    CheckboxInput, 
-    DateInput, 
-    EmailInput,
-    NumberInput, 
-    Select, 
-    Textarea, 
-    TextInput
-)
-
 ## MODELS CLIENT APP ##
 from clients.models import Client, ClientType
+from django.forms import ModelForm
+from django.forms.widgets import DateInput, EmailInput, NumberInput, Select, TextInput
 
 
 ## CLIENT CREATEFORM ##

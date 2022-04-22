@@ -2,11 +2,8 @@
 
 from credits.models import Credits, CreditType
 from django.forms import ModelForm
-from django.forms.widgets import (
-    NumberInput,
-    Select,
-    TextInput,
-)
+from django.forms.widgets import NumberInput, Select, TextInput
+
 
  ## CreationsForm of Model Credit ##
 class CreditsForm(ModelForm):

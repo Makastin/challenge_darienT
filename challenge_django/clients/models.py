@@ -1,10 +1,8 @@
 
 ## Djanfgo Packages ##
-from django.db import models
-
-
 ## MODEL BANK APP ##
 from banks.models import Bank
+from django.db import models
 
 
 ## MODEL CLIENT TYPE ##

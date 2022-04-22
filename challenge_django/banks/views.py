@@ -1,13 +1,11 @@
  ## Django packages ##
 
-from django.shortcuts import render
-from django.urls import reverse_lazy
-from django.views.generic import CreateView, DetailView, TemplateView
-
-
 ## MODEL BANK APP ##
 from banks.forms import BankCreateForm, BankTypeCreateForm
 from banks.models import Bank, BankType
+from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DetailView, TemplateView
 
 
  ## CREATEVIEW OF MODEL BANK ##

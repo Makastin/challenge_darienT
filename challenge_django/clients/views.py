@@ -1,19 +1,11 @@
 ## Django Packages ##
 
-from django.shortcuts import render
-from django.urls import reverse_lazy
-from django.views.generic import (
-    CreateView, 
-    DeleteView, 
-    DetailView,
-    TemplateView, 
-    UpdateView
-)
-
-
 ## MODEL AND FORM CLIENT APP ##
 from clients.forms import ClientFormCreate, ClientFormUpdate, ClientTypeForm
 from clients.models import Client, ClientType
+from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DeleteView, DetailView, TemplateView, UpdateView
 
 
 ## CREATEVIEW MODEL CLIENT ##

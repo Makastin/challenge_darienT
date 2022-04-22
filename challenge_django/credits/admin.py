@@ -1,8 +1,7 @@
  ## Django packages ##
 
-from django.contrib import admin
 from credits.models import Credits, CreditType
-
+from django.contrib import admin
 
 
  ## ADMIN VIEW OF CREDITS MODEL ##

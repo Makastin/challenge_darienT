@@ -1,14 +1,11 @@
  ## Django packages ##
-from django.contrib.auth.views import LoginView
-from django.urls import reverse_lazy
-from django.views.generic import TemplateView
-
-
 ## MODEL BANK AND CREDITS APP ##
 from banks.models import Bank
 from clients.models import Client
 from credits.models import Credits
-
+from django.contrib.auth.views import LoginView
+from django.urls import reverse_lazy
+from django.views.generic import TemplateView
 
 
 ## Login View ##

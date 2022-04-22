@@ -1,9 +1,8 @@
  ## Django packages ##
 
-from django.db import models
-from clients.models import Client
 from banks.models import Bank
-
+from clients.models import Client
+from django.db import models
 
 
  ## MODEL OF CREDIT TYPES ##
