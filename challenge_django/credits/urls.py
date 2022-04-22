@@ -1,10 +1,9 @@
  ## Django packages ##
 
+from credits.views import CreditDetail, CreditList, CreditsCreate, CreditTypeCreate
 from django.contrib import admin
-from django.urls import path, re_path
 from django.contrib.auth.decorators import login_required
-from credits.views import CreditsCreate, CreditDetail, CreditList, CreditTypeCreate
-
+from django.urls import path, re_path
 
  ## URLS OF CREDITS APP ##
 urlpatterns = [

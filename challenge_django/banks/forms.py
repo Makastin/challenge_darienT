@@ -1,11 +1,9 @@
  ## Django packages ##
 
-from django.forms import ModelForm
-from django.forms.widgets import CheckboxInput, Select, TextInput
-
-
 ## MODEL BANK APP ##
 from banks.models import Bank, BankType
+from django.forms import ModelForm
+from django.forms.widgets import CheckboxInput, Select, TextInput
 
 
 ## CreationForm of Model Bank ##

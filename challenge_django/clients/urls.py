@@ -1,19 +1,10 @@
 ## Djago Packages ##
 
+## VIEWS CLIENT APP ##
+from clients.views import ClientCreate, ClientDelet, ClientDetail, ClientList, ClientTypeCreate, ClientUpdate
 from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 from django.urls import path, re_path
-
-
-## VIEWS CLIENT APP ##
-from clients.views import (
-        ClientCreate, 
-        ClientDelet, 
-        ClientDetail, 
-        ClientList,
-        ClientUpdate,
-        ClientTypeCreate
-)
 
 urlpatterns = [
     re_path('create-client/$',

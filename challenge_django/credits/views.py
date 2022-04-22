@@ -1,10 +1,11 @@
  ## Django packages ##
 
-from django.shortcuts import render
-from django.views.generic import TemplateView, CreateView, DetailView
-from credits.models import Credits, CreditType
 from credits.forms import CreditsForm, CreditTypeForm
+from credits.models import Credits, CreditType
+from django.shortcuts import render
 from django.urls import reverse_lazy
+from django.views.generic import CreateView, DetailView, TemplateView
+
 
  ## CREATEVIEW OF MODEL CREDIT ##
 class CreditsCreate(CreateView):

@@ -1,10 +1,8 @@
 
 ## Django Packages ##
-from django.contrib import admin
-
-
 ## MODEL BANK APP ##
 from banks.models import Bank, BankType
+from django.contrib import admin
 
 
 ## Admin View of Model Bank ##
