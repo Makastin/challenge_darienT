@@ -52,6 +52,14 @@ class Credits(models.Model):
         limit_choices_to= {'allowed_credit':True},   
         verbose_name = 'Bank of Credit'
     )
+    credit_type = models.ForeignKey(
+        CreditType, 
+        on_delete=models.CASCADE,
+        verbose_name='Credit Type',
+        blank=True,
+        null=True
+    )
+    
     created_at = models.DateTimeField(
         auto_now_add=True
     )

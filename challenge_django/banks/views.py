@@ -40,6 +40,11 @@ class BankDetail(DetailView):
  ## CREATEVIEW OF BANKTYPES ##
 class BankTypeCreate(CreateView):
     model = BankType
+    form_class = BankTypeCreateForm
     template_name = "banks/bank_type_create.html"
+    success_url = reverse_lazy('banks:bank-create')
+    
+    def form_valid(self, form):
+        return super().form_valid(form)
     
 

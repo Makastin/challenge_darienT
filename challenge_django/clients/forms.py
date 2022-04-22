@@ -75,3 +75,15 @@ class ClientFormUpdate(ModelForm):
             'client_type': Select(attrs={'class': 'form-control', 'required': 'True'}),
             'bank_entity': Select(attrs={'class': 'form-control', 'required': 'True'}),
         }
+
+
+## CLIENTTYPE CREATEFORM ##
+class ClientTypeForm(ModelForm):
+    class Meta:
+        model = ClientType
+        fields = [
+            'client_type',
+        ]
+        widgets = {
+            'client_type': TextInput(attrs={'class': 'form-control', 'required': 'True'}),
+        }
