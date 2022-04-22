@@ -16,8 +16,8 @@ urlpatterns = [
     path('detail-bank/<int:pk>/',
             login_required(BankDetail.as_view()), name="bank-detail"),              ## URL BANK DETAIL ##
     re_path('list-banks/$',
-            login_required(BankList.as_view()), name="bank-list"),                  ## URL BANK LIST
+            login_required(BankList.as_view()), name="bank-list"),                  ## URL BANK LIST ##
     re_path('create-bank-type/$',
-            login_required(BankTypeCreate.as_view()), name="bank-type-create"),     ## URL BANK TYPE
+            login_required(BankTypeCreate.as_view()), name="bank-type-create"),     ## URL BANK TYPE ##
     
 ]
