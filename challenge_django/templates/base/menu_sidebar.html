@@ -33,7 +33,9 @@
                     <li class="nav-item">
                         <a href="{% url 'banks:bank-create' %}" class="nav-link">Crear Banco</a>
                     </li>
-                    
+                    <li class="nav-item">
+                        <a href="{% url 'banks:bank-type-create' %}" class="nav-link">Crear Tipo de Banco</a>
+                    </li>
                     <li class="nav-item">
                         <a href="{% url 'banks:bank-list' %}" class="nav-link">Lista de Bancos</a>
                     </li>
@@ -53,6 +55,9 @@
                         <a href="{% url 'clients:client-create' %}" class="nav-link">Crear Clientes</a>
                     </li>
                     <li class="nav-item">
+                        <a href="{% url 'clients:client-type-create' %}" class="nav-link">Crear Tipo de Cliente</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{% url 'clients:client-list' %}" class="nav-link">Lista de Clientes</a>
                     </li>
                 </ul>
@@ -69,6 +74,9 @@
                 <ul class="nav ms-4">
                     <li class="nav-item">
                         <a href="{% url 'credits:credit-create' %}" class="nav-link">Crear Creditos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'credits:credit-type-create' %}" class="nav-link">Crear Tipo de Credito</a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'credits:credit-list' %}" class="nav-link">Lista de Creditos</a>
