@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  django:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: django_app
+    container_name: django_app
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+    environment:
+      - DEBUG=True
+      - SECRET_KEY=rlsct=t)x(w^)au8q5!&4xou%!^m9=zm1c5*e8&k2gaj+2@l&i
+      - DB_NAME=django_app
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_PORT=5432
+      - DB_HOST=postgres
+      - STATIC_URL=/static/
+    ports:
+      - "8000:8000"
+    command: sh -c "
+      sleep 5 && python challenge_django/manage.py migrate && 
+      echo \"from django.contrib.auth.models import User; User.objects.create_superuser('admin@localhost.com', email='admin@localhost.com', password='4321Admin') if not User.objects.filter(email='admin@localhost.com').exists() else 0\" | python challenge_django/manage.py shell &&
+      python challenge_django/manage.py runserver 0.0.0.0:8000
+      "
+    networks:
+      - django
+
+  postgres:
+    restart: always
+    image: postgres:12.5-alpine
+    container_name: django_psql
+    environment:
+      - POSTGRES_DB=django_app
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - django
+    ports:
+      - "5433:5432"
+
+
+networks:
+  django:
+    driver: bridge
+volumes:
+  pgdata: {}
