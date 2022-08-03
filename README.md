@@ -1,7 +1,7 @@
 # Funcionalidades del Backend
 
 ## Estructura del Proyecto
-La idea principal del proyecto es agilizar la problematica planteada a la empresa `Tu Credito`,
+Las ideas principal del proyecto es agilizar la problematica planteada a la empresa `Tu Credito`,
 la cual mantienen registros multiples de forma manual y no cuentan con la tecnologia para mantener 
 de una forma sistematizada, la creacion y seguimiento rapido de la emision de creditos a sus clientes
 a traves de bancos que ofrezcan dicho servicio.
